@@ -13,7 +13,7 @@ browser.get "http://teamphoria-web-dev.elasticbeanstalk.com/"
 browser.current_url
 browser.title
 browser.find_element(name: "email").send_keys "doug.dykstra@sparcedge.com"
-browser.find_element(name: "password").send_keys "dizoug130"
+browser.find_element(name: "password").send_keys "password"
 browser.find_element(css: "#login-container > form > fieldset > button").click
 browser.find_element(css: "#login-container > div > ul > li:nth-child(7) > a > h3").click #This for tenant selection post login
 browser.find_element(css: "#vm-options > a.nav-link.nav-link-primary > span").click
