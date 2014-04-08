@@ -53,16 +53,11 @@ require "selenium-webdriver"
 			     browser.find_element(css: "#fullscreen-views > div > div > form > fieldset.send-message > ol > li:nth-child(2) > select > option:nth-child(4)").send_keys :tab
 
 		#Badge select
-			browser.find_element(css: ".award-ribbon:nth-child(2)").click 
+			browser.find_element(xpath: "//*[@id='fullscreen-views']/div/div/form/fieldset[1]/div[2]").click 
 
 		#Sparcet Reason and Thanks message; send click
-			sleep(5)
 			browser.find_element(id: "reason").send_keys "This sparcet was sent through automation"
 			 browser.find_element(name: "thanksMessage").send_keys "Automated sparcet"
-
-		#Badge select
-			browser.find_element(class_name: "award-ribbon").click 
-
 			  browser.find_element(class_name: "action-submit").click
 
 	#wait.until(ExpectedConditions.elementToBeClickable(By.class "selectize-control"));
