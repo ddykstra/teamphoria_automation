@@ -34,7 +34,6 @@ require "selenium-webdriver"
 			browser.find_element(id: "give-input-selectize").send_keys "josh.garwood"
 			sleep(5)
 			browser.find_element(id: "give-input-selectize").send_keys :tab
-	#NOTE, use ':enter' for group as focus stays in the recipient field.
 
 			browser.find_element(name: "impactId").click
 			sleep(2)
