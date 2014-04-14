@@ -24,7 +24,7 @@ require "selenium-webdriver"
 			  browser.find_element(css: "#login-container > form > fieldset > button").click
 
 	#Click on Sparcet Expand icon from feed to view full detail
-			sleep(15)
+			sleep(20)
 			browser.find_element(xpath: "//*[@id='vm-list']/div[1]/div[1]/a[1]/i").click
 
 	#Close the full detail view; top, right close button
@@ -44,7 +44,7 @@ require "selenium-webdriver"
 			#browser.find_element(xpath: "//*[@id='vm-list']/div[1]/div[1]/a[1]/i").click
 
 	#Click the Likes Button on full detail
-			sleep(12)
+			sleep(15)
 			browser.find_element(xpath: "//*[@id='fullscreen-views']/div/div/div[2]/div[1]/a/i").click
 
 	#Click the print button and print sparcet
@@ -54,14 +54,16 @@ require "selenium-webdriver"
 	#Click Tell button and enters an email to share with
 			browser.find_element(xpath: "//*[@id='fullscreen-views']/div/div/div[3]/ul/li[2]/a/i").click
 			 browser.find_element(id: "give-input-selectize").click
-			  browser.find_element(id: "give-input-selectize").send_keys "josh.garwood"
+			  browser.find_element(id: "give-input-selectize").send_keys "doug.dykstra"
 			  sleep(5)
 			   browser.find_element(id: "give-input-selectize").send_keys :tab
 			    browser.find_element(id: "share-message").send_keys "This Sparcet share is done through automation"
 			     browser.find_element(xpath: "//*[@id='tell']/form/div/button[2]").click
 
-#FAILING
-
+#FAILING - see if below line fixes it
+			sleep(20)
+			browser.find_element(xpath: "//*[@id='vm-list']/div[1]/div[1]/a[1]/i").click
+	
 	#Add a Sparcet comment
 			browser.find_element(xpath: "//*[@id='comments']/form/div/div/textarea").send_keys "This Sparcet comment was added through automation"
 			 browser.find_element(xpath: "//*[@id='comments']/form/div/div/div/button[1]"). click
