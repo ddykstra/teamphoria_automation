@@ -47,12 +47,13 @@ require "selenium-webdriver"
 			sleep(15)
 			browser.find_element(xpath: "//*[@id='fullscreen-views']/div/div/div[2]/div[1]/a/i").click
 
-	#Click the print button and print sparcet
-			browser.find_element(xpath: "//*[@id='fullscreen-views']/div/div/div[2]/div[2]/a/i").click
+	#Click the print button and print sparcet --EXCLUDING PRINTING
+			#browser.find_element(xpath: "//*[@id='fullscreen-views']/div/div/div[2]/div[2]/a/i").click
 			 #browser.find_element(id: "destination-search").send_keys :enter
 
 	#Click Tell button and enters an email to share with
 			browser.find_element(xpath: "//*[@id='fullscreen-views']/div/div/div[3]/ul/li[2]/a/i").click
+			sleep(5)
 			 browser.find_element(id: "give-input-selectize").click
 			  browser.find_element(id: "give-input-selectize").send_keys "doug.dykstra"
 			  sleep(5)
