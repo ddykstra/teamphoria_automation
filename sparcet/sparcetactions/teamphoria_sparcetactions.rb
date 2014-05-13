@@ -13,8 +13,9 @@ xpath				:xpath/
 
 require "selenium-webdriver"
  browser = Selenium::WebDriver.for :firefox
-  browser.get "http://teamphoria-web-dev.elasticbeanstalk.com/"
-  #browser.window.resize_to(1680,1050)
+  #browser = Selenium::WebDriver.for :safari
+   browser.get "http://teamphoria-web-dev.elasticbeanstalk.com/"
+    #browser.window.resize_to(1680,1050)
    browser.current_url
 	browser.title
 
